@@ -2,33 +2,25 @@ package controller
 
 import "github.com/gin-gonic/gin"
 
-func GetFoods() gin.HandlerFunc {
+func GetOrders() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.JSON(200, gin.H{"message": "Get Users"})
 	}
 }
-func GetFood() gin.HandlerFunc {
+func GetOrder() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.JSON(200, gin.H{"message": "Get Users"})
 	}
 }
 
-func CreateFood() gin.HandlerFunc {
+func CreateOrder() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.JSON(200, gin.H{"message": "Create Food"})
 	}
 }
 
-func UpdateFood() gin.HandlerFunc {
+func UpdateOrder() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.JSON(200, gin.H{"message": "Update Food"})
 	}
-}
-
-func round(num float64) int {
-
-}
-
-func toFixed(num float64, precision int) float64 {
-
 }
