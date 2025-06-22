@@ -10,6 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+
 func DBinstance() *mongo.Client {
 	MongoDb := "mongodb://localhost:27017"
 	client, err := mongo.NewClient(options.Client().ApplyURI(MongoDb))
