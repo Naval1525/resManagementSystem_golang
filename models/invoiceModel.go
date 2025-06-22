@@ -7,12 +7,12 @@ import (
 )
 
 type Invoice struct {
-	ID         primitive.ObjectID `bson:"_id"`
-	Name       *string            `json:"name" validate:"required,min=2,max=100"`
-	Price      *float64           `json:"price" validate:"required"`
-	Food_image *string            `json:"food_image" validate:"required"`
-	Created_at time.Time          `json:"created_at"`
-	Updated_at time.Time          `json:"updated_at"`
-	Food_id    *string            `json:"" validate:"required"`
-	Menu_id    *string            `json:"description" validate:"required,min=10,max=500"`
+	ID               primitive.ObjectID `bson:"_id"`
+	Invoice_id       string             `json:"invoice_id"`
+	Order_id         string             `json:"order_id"`
+	Payment_method   *string            `json:"payment_method" validate:"eq=CARD|eq=CASH|eq="`
+	Payment_status   *string            `json:"payment_status" validate:"eq=required|eq=PENDING|eq=PAID"`
+	Payment_due_date time.Time          `json:"Payment_due_date"`
+	Created_at       time.Time          `json:"created_at"`
+	Updated_at       time.Time          `json:"updated_at"`
 }
